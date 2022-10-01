@@ -12,7 +12,7 @@ function getArrayParams(arr) {
     if (number > max) {
       max = number;
     }
-    sum = sum + number;
+    sum += number;
   }
   avg = parseFloat((sum / arr.length).toFixed(2));
 
@@ -40,9 +40,5 @@ function makeWork(arrOfArr, func) {
 
 // Задание 3
 function worker2(arr) {
-
-  console.log(getArrayParams(arr).min);
-  console.log(getArrayParams(arr).max);
-
   return getArrayParams(arr).max - getArrayParams(arr).min;
 }
